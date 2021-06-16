@@ -124,8 +124,8 @@ function burger() {
 }
 
 function showBtn() {
-  $('.btn-icon').on('click', function () {
-    $('.btn-icon').toggleClass('active');
+  $('.btn-icon-wrap').on('click', function () {
+    $('.btn-icon-wrap').toggleClass('active');
     $('.btn-show').toggleClass('open');
     $('.btn-show-body').toggleClass('show');
   });

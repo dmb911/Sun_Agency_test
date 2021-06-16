@@ -1011,22 +1011,30 @@ form {
       border-radius: 0;
       background-color: transparent;
       width: 50%; } }
-  .products .btn-icon {
-    display: block;
-    width: 45px;
-    height: 4px;
-    background: rgba(0, 0, 0, 0.15);
-    border-radius: 3px;
-    margin: 20px auto 55px auto;
-    position: relative;
+  .products .btn-icon-wrap {
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    position: absolute;
     z-index: 6;
-    transition: 1s; }
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
     @media (min-width: 1440px) {
-      .products .btn-icon {
+      .products .btn-icon-wrap {
         display: none; } }
-    .products .btn-icon.active {
-      transition: 1s;
-      top: -155px; }
+    .products .btn-icon-wrap .btn-icon {
+      display: block;
+      width: 45px;
+      height: 4px;
+      background: rgba(0, 0, 0, 0.15);
+      border-radius: 3px; }
   .products .orderSum {
     display: -ms-flexbox;
     display: flex;
@@ -1079,7 +1087,7 @@ form {
     transition: 0.3s; }
 
 .btn-show {
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
